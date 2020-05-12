@@ -1,6 +1,5 @@
 //+++++++++ Start Here! All problems are below. +++++++++//
 
-
 //////////////////PROBLEM 1////////////////////
 
 //Finish the function addDucks by writing a for loop that loops
@@ -9,15 +8,16 @@
 //for-loop's iterator with "let" instead of "var", and call it "i"
 
 function addDucks(arr, ind) {
-
   //WRITE YOUR FOR-LOOP HERE
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i] + "Duck";
+  }
+
   //For your iterator, declare it with the let keyword, and name it "i"
-  
 
   //DO NOT TOUCH THIS
-  return [arr, ind]
+  return [arr, ind];
 }
-
 
 //////////////////PROBLEM 2////////////////////
 //Within the if statement below, declare a variable
@@ -28,9 +28,10 @@ function addDucks(arr, ind) {
 if (true) {
   //CODE HERE
 
+  let color = "red";
 
   //DO NOT TOUCH THIS LINE
-  getter.get(color)
+  getter.get(color);
 }
 
 //////////////////PROBLEM 3////////////////////
@@ -40,6 +41,7 @@ if (true) {
 
 //Code here
 
+const greetingsEarthlings = "Hello";
 
 //////////////////PROBLEM 4////////////////////
 //Create a function called madLib that takes in a
@@ -53,12 +55,11 @@ if (true) {
 
 //Code here
 
-
 //////////////////PROBLEM 5////////////////////
 //Based on the following code, answer the question below:
 
-var arr = ["hey", "hi", "ciao"]
-var obj = { a: "a", b: "b", c: "c" }
+var arr = ["hey", "hi", "ciao"];
+var obj = { a: "a", b: "b", c: "c" };
 // Example A: [1, 2, 3, ...obj]
 // Example B: [1, 2, 3, ...arr]
 // Example C: {one: 1, two: 2, ...obj}
@@ -73,7 +74,6 @@ var obj = { a: "a", b: "b", c: "c" }
 // var answers = ["Example A", "Example B"]
 // var answers = ["Example C", "Example D"]
 
-
 //////////////////PROBLEM 6////////////////////
 //Create an arrow function called "cleanUp". It should
 //take in a string, remove all the spaces, and return the
@@ -81,6 +81,11 @@ var obj = { a: "a", b: "b", c: "c" }
 
 //Code here
 
+cleanUp = (string) => {
+  return string.replace(/\s/g, "");
+};
+
+console.log(cleanUp("i Love you"));
 
 //////////////////PROBLEM 7////////////////////
 //Finish the function below. Assume that the
@@ -89,9 +94,9 @@ var obj = { a: "a", b: "b", c: "c" }
 //Return ocean.
 
 function whatOcean(obj) {
+  let { ocean } = obj;
 
-  //Code here
-  
+  return ocean;
 }
 
 //////////////////PROBLEM 8////////////////////
@@ -103,5 +108,3 @@ function whatOcean(obj) {
 //the leftovers function should return the string, plus " & ",
 //plus the last element of the rest parameter, like so:
 //"spaghetti & liver with onions"
-
-
